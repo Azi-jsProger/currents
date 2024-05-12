@@ -2,6 +2,7 @@ import React, {useEffect, useState} from 'react';
 import AllPerson from "./components/getAllPerson/AllPerson";
 import './App.css'
 import axios from "axios";
+import CharacterDetail from "./components/getDetailPerson/characterDetail";
 
 const App = () => {
 
@@ -19,23 +20,20 @@ const App = () => {
         getPersons()
     }, []);
 
-    console.log(persons)
+    const [personId, setPersonId] = useState([])
+
+
 
     return (
         <div className='App'>
             <AllPerson
                 persons={persons}
             />
-
+            <CharacterDetail
+                setPersonId={setPersonId}
+            />
         </div>
     );
 };
-
-
-
-
-
-
-
 
 export default App;

@@ -1,15 +1,21 @@
-import React from 'react';
+import React, {useState} from 'react';
 import './style.css'
 
-const AllPerson = (props) => {
 
+const AllPerson = (props) => {
     const {
-        persons
+        persons,
+        setPersonId
     } = props
+
+    const getById = (id) => {
+        setPersonId(prevIds => [...prevIds, id])
+    }
 
     const firstTenPersons = persons.slice(0, 10);
 
     return (
+
         <div className='persons-deteil'>
 
             <h1 className='Character'>Character List</h1>
@@ -28,18 +34,16 @@ const AllPerson = (props) => {
                         return (
 
                             <div>
-
-
                                 <div
                                     key={idx}
                                     className='person-info'
+                                    onClick={() => getById(item.id)}
                                 >
                                     <h1>{item.id}</h1>
                                     <h1>{item.firstName} {item.lastName}</h1>
-                                    <img className='person-img' src={item.imageUrl} alt=""/>
+                                    <img className='person-img' src={item.imageUrl} />
                                 </div>
                             </div>
-
 
                         )
                     })
@@ -47,8 +51,6 @@ const AllPerson = (props) => {
                     }
                 </div>
             </div>
-
-
         </div>
     );
 };
