@@ -16,4 +16,8 @@ code {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+  color: #111;
+  font-size: 14px;
+  font-weight: 400 ;
 }
+
