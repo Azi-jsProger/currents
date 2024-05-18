@@ -1,0 +1,16 @@
+.container {
+    width: 600px;
+    margin: 0 auto;
+}
+
+.error {
+    font-size: 50px;
+    text-transform: uppercase;
+    color: red;
+    text-align: center;
+}
+
+.character {
+    width: 100%;
+    height: auto;
+}
