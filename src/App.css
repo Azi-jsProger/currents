@@ -4,7 +4,8 @@
     background-color: #4C75A3;
     display: flex;
     justify-content: center;
-    align-items: center;
+    gap: 30px;
+    padding-top: 20px ;
 }
 
 
