@@ -1,14 +1,27 @@
 import React from 'react';
 import './App.css'
-import MainRoutes from "./routes/MainRoutes";
-
+import MainRoutes from "./routes/mainRoutes";
+import {ToastContainer} from "react-toastify";
+import 'react-toastify/dist/ReactToastify.css';
 
 const App = () => {
 
-
-
     return (
-      <MainRoutes />
+        <div>
+            <MainRoutes />
+            <ToastContainer
+                position="top-right"
+                autoClose={2000}
+                hideProgressBar={false}
+                newestOnTop={false}
+                closeOnClick
+                rtl={false}
+                pauseOnFocusLoss
+                draggable
+                pauseOnHover
+                theme="light"
+            />
+        </div>
     );
 };
 

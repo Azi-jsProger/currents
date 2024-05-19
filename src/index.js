@@ -6,17 +6,9 @@ import {BrowserRouter} from "react-router-dom";
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-    <div>
-        <BrowserRouter>
-            <App></App>
-        </BrowserRouter>
+    <BrowserRouter>
+        <App />
+    </BrowserRouter>
 
-    </div>
 );
-
-
-
-
-
-
 
